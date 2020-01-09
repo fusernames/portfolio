@@ -1,13 +1,16 @@
 import { createMuiTheme } from "@material-ui/core";
-import { indigo } from '@material-ui/core/colors'
+import { indigo, red } from '@material-ui/core/colors'
 
 export default createMuiTheme({
   palette: {
     primary: {
       main: indigo['A200']
     },
+    secondary: {
+      main: red[400]
+    },
     background: {
-      default: '#111'
+      default: '#121212'
     },
     text: {
       primary: 'rgba(255, 255, 255, .7)',

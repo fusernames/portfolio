@@ -2,13 +2,22 @@ import React, { useState } from 'react'
 import CommandLine from './CommandLine'
 import { Typography, useTheme, Grid } from '@material-ui/core'
 import { useSpring, animated } from 'react-spring'
+import { GithubCircle } from 'mdi-material-ui'
 
-const Project = ({ title, description, techs, align, imgs }) => {
+const Project = ({ title, description, techs, align, imgs, github }) => {
   const theme = useTheme()
   const style = align === 'right' ? { marginRight : 20 } : { marginLeft : 20 }
+  const justify = align === 'right' ? 'flex-end' : 'flex-start'
   return (
     <div>
-      <Typography align={align} color="primary" variant="h6" style={style}>{title}</Typography>
+      <div style={{ display: 'flex', alignItems: 'center', ...style, justifyContent: justify }}>
+        {github &&
+          <a href={github} style={{ lineHeight: 0 }}>
+            <GithubCircle color="secondary" style={{ marginRight: 8 }}/>
+          </a>
+        }
+        <Typography color="secondary" variant="h6">{title}</Typography>
+      </div>
       <Typography align={align}>{description}</Typography>
       <Typography align={align} component="em" style={{ ...style, display: 'block', color: theme.palette.text.secondary }}>{techs}</Typography>
       {imgs &&
@@ -28,7 +37,7 @@ const Project = ({ title, description, techs, align, imgs }) => {
 
 export default () => {
   return (
-    <CommandLine text="school projects" speed={1}>
+    <CommandLine text="school projects">
       <Grid container spacing={5}>
         <Grid item xs={12}>
           <Project
@@ -37,6 +46,7 @@ export default () => {
             description="Netflix like, streaming website with extrernal APIs and live torrent downloading on server."
             techs="React, Redux, Material-UI, Node, symphony, Oauth2"
             imgs={['hypertube/1.png', 'hypertube/2.png', 'hypertube/3.png', 'hypertube/4.png']}
+            github="https://github.com/fusernames/hypertube"
           />
         </Grid>
         <Grid item xs={12}>
@@ -45,6 +55,7 @@ export default () => {
             title="Matcha"
             description="Tinder like, dating website, matching people around you with popularity score algorithm."
             techs="React, Redux, MaterializeCSS, Node"
+            github="https://github.com/lbarthon/matcha"
           />
         </Grid>
         <Grid item xs={12}>
@@ -53,6 +64,34 @@ export default () => {
             title="Camagru"
             description="Instagram like, take picture with the device, apply filter on it and share it."
             techs="PHP, bootstrap, jQuery"
+            github="https://github.com/fusernames/camagru"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Project
+            align="right"
+            title="Lem-in"
+            description="Pathfinding."
+            techs="C"
+            github="https://github.com/fusernames/lem-in"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Project
+            align="left"
+            title="push-swap"
+            description="Sort algorithm."
+            techs="C"
+            github="https://github.com/fusernames/push_swap"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Project
+            align="right"
+            title="ft_printf"
+            description="Replica of printf function."
+            techs="C"
+            github="https://github.com/fusernames/ft_printf"
           />
         </Grid>
       </Grid>

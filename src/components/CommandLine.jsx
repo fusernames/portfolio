@@ -22,7 +22,7 @@ export default ({ text, children, speed }) => {
     <React.Fragment>
       <div onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
         <animated.div style={{ transform: props.xy.interpolate(trans1) }}>
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 10 }}>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 16 }}>
             <Typography style={{ marginRight: 10 }}>$></Typography>
             <Typing cursor="_" speed={speed} onFinishedTyping={() => toggle(true)}>
               <Typography>{text}</Typography>

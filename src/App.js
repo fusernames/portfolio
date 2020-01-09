@@ -8,6 +8,7 @@ import { useSpring, animated } from 'react-spring'
 import Menu from './components/Menu'
 import About from './components/About'
 import SchoolProjects from './components/SchoolProjects'
+import StartupInternship from './components/StartupInternship'
 
 function App() {
 
@@ -25,8 +26,8 @@ function App() {
       <div style={{ overflow: 'hidden' }}>
         <BrowserRouter>
           <Container style={{ marginTop: 50 }}>
-            <Typing cursor="_" speed={100}>
-              <Typography variant="h3" align="center" style={{ margin: '50px 0'}}>alcaroff's portfolio</Typography>
+            <Typing cursor="_" speed={2}>
+              <Typography variant="h4" align="center" style={{ margin: '50px 0'}}>Alexis Caroff</Typography>
             </Typing>
             <animated.div style={animation}>
               <Menu/>
@@ -35,6 +36,7 @@ function App() {
               <Switch>
                 <Route path="/about" component={About}/>
                 <Route path="/schoolProjects" component={SchoolProjects}/>
+                <Route path="/startupInternship" component={StartupInternship}/>
               </Switch>
             </div>
           </Container>

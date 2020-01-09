@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link, Typography, Grid, makeStyles } from '@material-ui/core'
-import { indigo } from '@material-ui/core/colors'
+import { amber } from '@material-ui/core/colors'
+import { Link, Grid, makeStyles, useTheme } from '@material-ui/core'
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { animated, useSpring } from 'react-spring'
 
@@ -14,12 +14,13 @@ const useStyles = makeStyles({
     display: 'block',
     width: '100%',
     height: '50px',
-    color: indigo['A200'],
     textDecoration: 'none !important',
   }
 })
 
 const Tab = ({ link, label }) => {
+
+  const theme = useTheme()
   const [on, toggle] = useState(false)
   const [pressed, setPressed] = useState(false)
   const classes = useStyles()
@@ -50,10 +51,11 @@ const Tab = ({ link, label }) => {
           className={classes.link}
           onMouseLeave={handleToggle}
           onMouseEnter={handleToggle}
+          color="primary"
         >
           {label}
         </Link>
-        <div style={{ height: 1, backgroundColor: indigo['A200'], width: (on || isActive) ? '100%' : 2, transition: '.4s' }}></div>
+        <div style={{ height: 1, backgroundColor: theme.palette.primary.main, width: (on || isActive) ? '100%' : 0, transition: '.3s' }}></div>
       </div>
     </animated.div>
   )
