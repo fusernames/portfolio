@@ -24,10 +24,10 @@ export default () => {
           </Grid>
         </Grid>
         <Typography variant="h6" align="left">
-          Hello, my name is <b style={{ color: theme.palette.secondary.main }}>Alexis</b>, I'm <b>french</b>, I'm <b>24 years old</b>, I'm currently student at 42 school Paris and looking for a job in US
+          Hello, my name is <b style={{ color: theme.palette.secondary.main }}>Alexis</b>, I'm french, I'm 24 years old, I'm currently student at 42 school Paris and looking for a job in US.
         </Typography>
         <Typography style={{ marginTop: 24 }} align="left">
-          I have been studying for 2.3 years at 42, it made me learn about web languages and some of the most popular and newest web technologies.<br/>
+          I have been studying for 3 years at 42, it made me learn about web languages and some of the most popular and newest web technologies.<br/>
           But first of all I learned to learn and I think it is one of the most essential qualities to work in a profession where technologies are evolving so fast.
         </Typography>
       </div>

@@ -23,7 +23,7 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline/>
-      <div style={{ overflow: 'hidden' }}>
+      <div style={{ overflow: 'hidden', minHeight: '100vh'}}>
         <BrowserRouter>
           <Container style={{ marginTop: 50 }}>
             <Typing cursor="_" speed={2}>

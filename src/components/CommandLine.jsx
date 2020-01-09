@@ -7,7 +7,7 @@ export default ({ text, children, speed }) => {
   const [on, toggle] = useState(false)
 
   let animation = useSpring({
-    transform: on ? 'translateY(0px)' : 'translateY(-2000px)'
+    transform: on ? 'translateY(0px)' : 'translateY(2000px)'
   })
 
   const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]

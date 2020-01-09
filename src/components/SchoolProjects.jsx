@@ -21,10 +21,10 @@ const Project = ({ title, description, techs, align, imgs, github }) => {
       <Typography align={align}>{description}</Typography>
       <Typography align={align} component="em" style={{ ...style, display: 'block', color: theme.palette.text.secondary }}>{techs}</Typography>
       {imgs &&
-        <Grid container spacing={2} style={{ marginTop: 8 }}>
+        <Grid container spacing={2} style={{ marginTop: 8 }} justify={justify}>
           {imgs.map(imgLink => (
             <Grid item>
-              <div style={{ width: 120, height: 120, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#0b0b0b' }}>
+              <div style={{ width: 120, height: 120, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#202020', borderRadius: 3, overflow: 'hidden' }}>
                 <img src={`${process.env.PUBLIC_URL}/images/${imgLink}`} alt="osef" width="100%" height="auto"/>
               </div>
             </Grid>
@@ -55,6 +55,7 @@ export default () => {
             title="Matcha"
             description="Tinder like, dating website, matching people around you with popularity score algorithm."
             techs="React, Redux, MaterializeCSS, Node"
+            imgs={['matcha/1.png', 'matcha/2.png', 'matcha/3.png', 'matcha/4.png']}
             github="https://github.com/lbarthon/matcha"
           />
         </Grid>
