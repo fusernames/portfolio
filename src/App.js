@@ -6,12 +6,12 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 // components
 import Menu from './components/Menu'
-import AboutMe from './components/AboutMe'
+import About from './components/About'
 import SchoolProjects from './components/SchoolProjects'
 
 function App() {
 
-  let animation1 = useSpring({
+  let animation = useSpring({
     from: { transform: 'translate(2000px)' },
     to: [
       { transform: 'translate(-30px)', config: { duration: 500 } },
@@ -25,15 +25,15 @@ function App() {
       <div style={{ overflow: 'hidden' }}>
         <BrowserRouter>
           <Container style={{ marginTop: 50 }}>
-            <Typing cursor="_" speed={100} >
+            <Typing cursor="_" speed={100}>
               <Typography variant="h3" align="center" style={{ margin: '50px 0'}}>alcaroff's portfolio</Typography>
             </Typing>
-            <animated.div style={animation1}>
+            <animated.div style={animation}>
               <Menu/>
             </animated.div>
             <div style={{ margin: '40px 0' }}>
               <Switch>
-                <Route path="/aboutMe" component={AboutMe}/>
+                <Route path="/about" component={About}/>
                 <Route path="/schoolProjects" component={SchoolProjects}/>
               </Switch>
             </div>

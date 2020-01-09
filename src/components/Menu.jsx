@@ -63,7 +63,7 @@ export default () => {
   return (
     <Grid container spacing={5} justify="center">
       <Grid item>
-        <Tab link="/aboutMe" label="About Me"/>
+        <Tab link="/about" label="About"/>
       </Grid>
       <Grid item>
         <Tab link="/schoolProjects" label="School Projects"/>
