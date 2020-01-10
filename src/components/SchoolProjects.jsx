@@ -75,7 +75,7 @@ export default () => {
           <Project
             align="left"
             title="push-swap"
-            description="Sort algorithm."
+            description="Sorting algorithm."
             techs="C"
             github="https://github.com/fusernames/push_swap"
           />

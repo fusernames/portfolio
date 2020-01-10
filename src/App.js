@@ -26,7 +26,7 @@ function App() {
       <div style={{ overflow: 'hidden', minHeight: '100vh'}}>
         <BrowserRouter>
           <Container style={{ marginTop: 50 }}>
-            <Typing cursor="_" speed={2}>
+            <Typing cursor="_" speed={50}>
               <Typography variant="h4" align="center" style={{ margin: '50px 0'}}>Alexis Caroff</Typography>
             </Typing>
             <animated.div style={animation}>

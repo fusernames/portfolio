@@ -22,7 +22,7 @@ export default ({ imgs, justify, style, maxImgs }) => {
   //if (!justify) justify = 'center'
   const [open, setOpen] = useState(false)
   const classes = useStyles()
-  if (!maxImgs) maxImgs = 10
+  maxImgs = 8
 
   return (
     <React.Fragment>
