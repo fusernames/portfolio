@@ -3,9 +3,11 @@ import CommandLine from './CommandLine'
 import { Typography, useTheme, Grid } from '@material-ui/core'
 import { useSpring, animated } from 'react-spring'
 import { GithubCircle } from 'mdi-material-ui'
+import ImgViewer from './ImgViewer'
 
 const Project = ({ title, description, techs, align, imgs, github }) => {
   const theme = useTheme()
+
   const style = align === 'right' ? { marginRight : 20 } : { marginLeft : 20 }
   const justify = align === 'right' ? 'flex-end' : 'flex-start'
   return (
@@ -21,15 +23,7 @@ const Project = ({ title, description, techs, align, imgs, github }) => {
       <Typography align={align}>{description}</Typography>
       <Typography align={align} component="em" style={{ ...style, display: 'block', color: theme.palette.text.secondary }}>{techs}</Typography>
       {imgs &&
-        <Grid container spacing={2} style={{ marginTop: 8 }} justify={justify}>
-          {imgs.map(imgLink => (
-            <Grid item>
-              <div style={{ width: 120, height: 120, overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#202020', borderRadius: 3, overflow: 'hidden' }}>
-                <img src={`${process.env.PUBLIC_URL}/images/${imgLink}`} alt="osef" width="100%" height="auto"/>
-              </div>
-            </Grid>
-          ))}
-        </Grid>
+        <ImgViewer imgs={imgs} justify={justify}/>
       }
     </div>
   )
@@ -45,7 +39,7 @@ export default () => {
             title="Hypertube"
             description="Netflix like, streaming website with extrernal APIs and live torrent downloading on server."
             techs="React, Redux, Material-UI, Node, symphony, Oauth2"
-            imgs={['hypertube/1.png', 'hypertube/2.png', 'hypertube/3.png', 'hypertube/4.png']}
+            imgs={[{ src: '/images/hypertube/1.png' }, { src: '/images/hypertube/2.png' }, { src: '/images/hypertube/3.png' }, { src: '/images/hypertube/4.png' }]}
             github="https://github.com/fusernames/hypertube"
           />
         </Grid>
@@ -55,7 +49,7 @@ export default () => {
             title="Matcha"
             description="Tinder like, dating website, matching people around you with popularity score algorithm."
             techs="React, Redux, MaterializeCSS, Node"
-            imgs={['matcha/1.png', 'matcha/2.png', 'matcha/3.png', 'matcha/4.png']}
+            imgs={[{ src: '/images/matcha/1.png' }, { src: '/images/matcha/2.png' }, { src: '/images/matcha/3.png' }]}
             github="https://github.com/lbarthon/matcha"
           />
         </Grid>

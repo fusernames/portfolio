@@ -55,7 +55,7 @@ const Tab = ({ link, label }) => {
         >
           {label}
         </Link>
-        <div style={{ height: 1, backgroundColor: theme.palette.primary.main, width: (on || isActive) ? '100%' : 0, transition: '.3s' }}></div>
+        <div style={{ height: 3, backgroundColor: theme.palette.primary.main, width: (on || isActive) ? '100%' : 3, transition: '.3s', borderRadius: 3 }}></div>
       </div>
     </animated.div>
   )
@@ -72,9 +72,6 @@ export default () => {
       </Grid>
       <Grid item>
         <Tab link="/startupInternship" label="Startup-Internship"/>
-      </Grid>
-      <Grid item>
-        <Tab link="/resume" label="Resume"/>
       </Grid>
     </Grid>
   )

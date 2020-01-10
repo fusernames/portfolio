@@ -10,7 +10,8 @@ export default createMuiTheme({
       main: red[400]
     },
     background: {
-      default: '#121212'
+      default: '#141414',
+      paper: '#111'
     },
     text: {
       primary: 'rgba(255, 255, 255, .7)',
