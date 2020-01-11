@@ -1,11 +1,9 @@
 import React from 'react'
 import CommandLine from './CommandLine'
-import { Typography, useTheme, Grid } from '@material-ui/core'
-import { LinkedinBox, GithubCircle, Email } from 'mdi-material-ui'
+import { Typography } from '@material-ui/core'
 import ImgViewer from './ImgViewer'
 
 export default () => {
-  const theme = useTheme()
   const imgs = []
   for (let i = 1; i <= 40; i++)
     imgs.push({ src: `/images/warera/Screenshot_${i}.png`})
@@ -25,11 +23,11 @@ export default () => {
       <Typography style={{ marginBottom: 24 }}>
         The project is an online game app on web browser, a geopolitical simulator where users plays a citizen.<br/>
         The game is addressed to a niche audience that likes strategical games.<br/>
-        There is some screen of the app
+        Here are some screens of the app
       </Typography>
       <ImgViewer imgs={imgs} maxImgs={10} style={{ marginBottom: 24 }}/>
       <Typography>I don't wanted to just make a functional website, I wanted the code to be easily scalable and the organization to be clean and mastered.</Typography>
-      <Typography>There are some screens of the front and back code.</Typography>
+      <Typography>Here are some screens of the front and back code.</Typography>
       <section style={{ marginTop: 24 }}>
         <Typography variant="h6">Front</Typography>
         <Typography color="secondary"><em>React.js, Material-UI, redux...</em></Typography>

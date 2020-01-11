@@ -1,7 +1,7 @@
 import React from 'react'
 import CommandLine from './CommandLine'
 import { Typography, useTheme, Grid, Link } from '@material-ui/core'
-import { LinkedinBox, GithubCircle, Email } from 'mdi-material-ui'
+import { LinkedinBox, GithubCircle } from 'mdi-material-ui'
 import { Link as RouterLink } from 'react-router-dom'
 
 export default () => {
@@ -30,7 +30,7 @@ export default () => {
         <Typography style={{ marginTop: 24 }} align="left">
           I'm currently studying at 42 school where I worked on several projects such as those you can see in <Link component={RouterLink} to="/schoolProjects">School Projects</Link> and <Link component={RouterLink} to="/startupInternship">Startup-Internship</Link>.<br/>
           Through these different experiences I learned about web languages and some of the most popular and newest web technologies.<br/>
-          Now I would like to contribute my skills and experiences in a new team, my goal is to join a company in the US to work and keep learning about everything concerning techs.<br/>
+          Now I would like to contribute my skills and experiences in a new team. My goal is to join a company in the US to work and keep learning about everything concerning techs.<br/>
         </Typography>
       </div>
     </CommandLine>

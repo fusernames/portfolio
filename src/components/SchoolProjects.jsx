@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CommandLine from './CommandLine'
 import { Typography, useTheme, Grid } from '@material-ui/core'
-import { useSpring, animated } from 'react-spring'
 import { GithubCircle } from 'mdi-material-ui'
 import ImgViewer from './ImgViewer'
 
