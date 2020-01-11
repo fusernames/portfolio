@@ -20,7 +20,8 @@
     "start": "PORT=3002 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deployment": "npm run build && nohup serve -s build -l 3002 &!"
   },
   "eslintConfig": {
     "extends": "react-app"
