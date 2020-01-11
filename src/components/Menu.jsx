@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { amber } from '@material-ui/core/colors'
 import { Link, Grid, makeStyles, useTheme } from '@material-ui/core'
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { animated, useSpring } from 'react-spring'
@@ -32,6 +31,7 @@ const Tab = ({ link, label }) => {
       (setActive(true))
     else
       setActive(false)
+      toggle(false)
   }, [location.pathname, link])
 
   const animation = useSpring({
