@@ -42,7 +42,7 @@ export default ({ imgs, justify, style, maxImgs }) => {
                 onClick={() => setOpen(i)}
                 className={classes.imgBox}
               >
-                <img src={imgObj.src} alt="IMG" width="100%" height="auto"/>
+                <img src={imgObj.src} alt="IMG" height="100%" width="auto"/>
               </div>
             </Grid>
           )
