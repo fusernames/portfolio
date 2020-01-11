@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { amber } from '@material-ui/core/colors'
 import { Link, Grid, makeStyles, useTheme } from '@material-ui/core'
 import { Link as RouterLink, useLocation } from 'react-router-dom';
@@ -22,10 +22,17 @@ const Tab = ({ link, label }) => {
 
   const theme = useTheme()
   const [on, toggle] = useState(false)
+  const [active, setActive] = useState(false)
   const [pressed, setPressed] = useState(false)
   const classes = useStyles()
   const location = useLocation()
-  const isActive = location.pathname === link
+
+  useEffect(() => {
+    if (location.pathname === link)
+      (setActive(true))
+    else
+      setActive(false)
+  }, [location.pathname, link])
 
   const animation = useSpring({
     from: { transform: `translateY(0px)` },
@@ -55,7 +62,7 @@ const Tab = ({ link, label }) => {
         >
           {label}
         </Link>
-        <div style={{ height: 3, backgroundColor: theme.palette.primary.main, width: (on || isActive) ? '100%' : 3, transition: '.3s', borderRadius: 3 }}></div>
+        <div style={{ height: 3, backgroundColor: theme.palette.primary.main, width: (on || active) ? '100%' : 3, transition: '.3s', borderRadius: 3 }}></div>
       </div>
     </animated.div>
   )

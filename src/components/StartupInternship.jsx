@@ -1,6 +1,6 @@
 import React from 'react'
 import CommandLine from './CommandLine'
-import { Typography } from '@material-ui/core'
+import { Typography, Link } from '@material-ui/core'
 import ImgViewer from './ImgViewer'
 
 export default () => {
@@ -18,10 +18,10 @@ export default () => {
 
   return (
     <CommandLine text="startup-internship">
-      <Typography variant="h4" color="primary" align="center" style={{ marginBottom: 16 }}>War-Era</Typography>
-      <Typography variant="h6" style={{ marginBottom: 24 }}>I had opportunity to work alone on a <b>BIG</b> project with coaching of the school during 5 months, let me introduce it</Typography>
+      <Link component="a" href="https://war-era.com"><Typography variant="h4" color="primary" align="center">War-Era</Typography></Link>
+      <Typography variant="h6" style={{ marginBottom: 24, marginTop: 16 }}>I had opportunity to work alone on a <b>BIG</b> project with coaching of the school during 5 months.</Typography>
       <Typography style={{ marginBottom: 24 }}>
-        The project is an online game app on web browser, a geopolitical simulator where users plays a citizen.<br/>
+        The project is an online game app on web browser, an international geopolitical simulation where an user play a citizen of his country, fight for it or for its allies to gain Military XP and work to produce items and gain Economic XP. He can also play politicals roles such as president, minister or congress member, create newspaper, articles, laws, corporations, companies, organizations, military org...<br/>
         The game is addressed to a niche audience that likes strategical games.<br/>
         Here are some screens of the app
       </Typography>
