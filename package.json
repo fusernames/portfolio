@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deployment": "npm run build && nohup serve -s build -l 3002 &!"
+    "deployment": "react-scripts build && nohup serve -s build -l 3002 &!"
   },
   "eslintConfig": {
     "extends": "react-app"
