@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Typing from 'react-typing-animation'
-import { Typography, useTheme } from '@material-ui/core'
+import { Typography, useTheme, Grid } from '@material-ui/core'
 import { useSpring, animated } from 'react-spring'
+import { GithubCircle, LinkedinBox } from 'mdi-material-ui'
+import IconLink from './IconLink'
 
 export default ({ text, children, speed }) => {
   const [on, toggle] = useState(false)
@@ -36,6 +38,17 @@ export default ({ text, children, speed }) => {
               <div style={{ padding: '16px 24px', background: theme.palette.background.paper, borderRadius: 3 }}>
                 {children}
               </div>
+              <Grid container spacing={2} alignItems="center" justify="center" style={{ marginTop: 24 }}>
+                <Grid item>
+                  <IconLink Icon={LinkedinBox} iconStyle={{ fontSize: 32 }} link="https://linkedin.com/in/alexis-caroff-a5b4a9181/"/>
+                </Grid>
+                <Grid item>
+                  <IconLink Icon={GithubCircle} iconStyle={{ fontSize: 32 }} link="https://github.com/fusernames"/>
+                </Grid>
+                <Grid item xs={12} style={{ display: 'flex', justifyContent: 'center' }}>
+                  <Typography component="span" color="secondary" style={{ marginLeft: 4, lineHeight: 0}}>acaroff10@gmail.com</Typography>
+                </Grid>
+              </Grid>
             </animated.div>
           }
         </animated.div>

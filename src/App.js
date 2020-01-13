@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { CssBaseline, Container, MuiThemeProvider, Typography, Button } from '@material-ui/core'
+import React from 'react';
+import { CssBaseline, Container, MuiThemeProvider, Typography } from '@material-ui/core'
 import theme from './theme'
 import Typing from 'react-typing-animation'
 import { BrowserRouter, Switch, Route} from 'react-router-dom'
