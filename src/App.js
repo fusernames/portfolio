@@ -34,7 +34,7 @@ function App() {
             </animated.div>
             <div style={{ margin: '40px 0' }}>
               <Switch>
-                <Route path="/about" component={About}/>
+                <Route exact path="/" component={About}/>
                 <Route path="/schoolProjects" component={SchoolProjects}/>
                 <Route path="/startupInternship" component={StartupInternship}/>
               </Switch>
