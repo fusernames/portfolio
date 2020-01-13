@@ -3,6 +3,7 @@ import CommandLine from './CommandLine'
 import { Typography, useTheme, Grid } from '@material-ui/core'
 import { GithubCircle } from 'mdi-material-ui'
 import ImgViewer from './ImgViewer'
+import IconLink from './IconLink'
 
 const Project = ({ title, description, techs, align, imgs, github }) => {
   const theme = useTheme()
@@ -13,9 +14,7 @@ const Project = ({ title, description, techs, align, imgs, github }) => {
     <div>
       <div style={{ display: 'flex', alignItems: 'center', ...style, justifyContent: justify }}>
         {github &&
-          <a href={github} style={{ lineHeight: 0 }}>
-            <GithubCircle color="secondary" style={{ marginRight: 8 }}/>
-          </a>
+          <IconLink link={github} fontSize={28} Icon={GithubCircle} style={{ marginRight: 8 }}/>
         }
         <Typography color="secondary" variant="h6">{title}</Typography>
       </div>

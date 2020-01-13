@@ -4,6 +4,7 @@ import { Typography, useTheme, Grid, Link } from '@material-ui/core'
 import { LinkedinBox, GithubCircle } from 'mdi-material-ui'
 import { Link as RouterLink } from 'react-router-dom'
 import ImgViewer from './ImgViewer'
+import IconLink from './IconLink'
 
 export default () => {
   const theme = useTheme()
@@ -12,14 +13,10 @@ export default () => {
       <div>
         <Grid container spacing={1} alignItems="center" style={{ marginBottom: 8 }}>
           <Grid item>
-            <a href="https://linkedin.com/in/alexis-caroff-a5b4a9181/" style={{ lineHeight: 0 }}>
-              <LinkedinBox color="secondary" style={{ fontSize: 32 }}/>
-            </a>
+            <IconLink Icon={LinkedinBox} iconStyle={{ fontSize: 32 }} link="https://linkedin.com/in/alexis-caroff-a5b4a9181/"/>
           </Grid>
           <Grid item>
-            <a href="https://github.com/fusernames" style={{ lineHeight: 0 }}>
-              <GithubCircle color="secondary" style={{ fontSize: 32 }}/>
-            </a>
+            <IconLink Icon={GithubCircle} iconStyle={{ fontSize: 32 }} link="https://github.com/fusernames"/>
           </Grid>
           <Grid item style={{ display: 'flex', alignItems: 'center' }}>
             <Typography component="span" color="secondary" style={{ marginLeft: 4, lineHeight: 0}}>acaroff10@gmail.com</Typography>
